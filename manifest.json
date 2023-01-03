@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "mAIl Pal",
+  "description": "A simple chrome extension that uses GPT-3.5 to speed up your email replies",
+  "author": "Paolo Dello Vicario",
+  "version": "1.0.1",
+  "permissions": [
+    "https://mail.google.com/",
+    "https://inbox.google.com/"
+  ],
+  "content_scripts" : [
+    {
+      "matches": ["https://mail.google.com/*", "https://inbox.google.com/*"],
+      "js": ["inboxsdk.js", "answer.js"]
+    }
+  ]
+}
